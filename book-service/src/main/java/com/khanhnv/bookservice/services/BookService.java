@@ -1,7 +1,7 @@
 package com.khanhnv.bookservice.services;
 
-import com.khanhnv.bookservice.model.Book;
-import com.khanhnv.bookservice.repository.BookRepository;
+import com.khanhnv.bookservice.models.Book;
+import com.khanhnv.bookservice.repositories.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -31,5 +31,9 @@ public class BookService {
 
     public void deleteBook(Book book){
         bookRepository.deleteById(book.getBookId());
+    }
+
+    public void deleteBook(int bookId){
+        bookRepository.deleteById(bookId);
     }
 }

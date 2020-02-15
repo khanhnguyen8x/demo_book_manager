@@ -1,4 +1,4 @@
-package com.khanhnv.bookservice.model;
+package com.khanhnv.bookservice.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -17,15 +17,15 @@ public class Book {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "book_id", nullable = false)
+    @Column(name = "book_id")
     private int bookId;
 
     @Column(name = "name", nullable = false)
     private String name;
 
     @Column(name = "price", nullable = false)
-    private double price;
+    private int price;
 
-    @Column(name = "category_id", nullable = false)
+    @Column(name = "category_id")
     private int categoryId;
 }

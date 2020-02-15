@@ -1,4 +1,4 @@
-package com.khanhnv.bookservice.model;
+package com.khanhnv.bookservice.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

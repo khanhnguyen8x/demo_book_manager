@@ -1,6 +1,6 @@
-package com.khanhnv.bookservice.repository;
+package com.khanhnv.bookservice.repositories;
 
-import com.khanhnv.bookservice.model.Book;
+import com.khanhnv.bookservice.models.Book;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

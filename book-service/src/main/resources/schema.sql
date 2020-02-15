@@ -1,7 +1,7 @@
 DROP TABLE IF EXISTS book;
 
 CREATE TABLE book(
-    book_id         INT PRIMARY KEY NOT NULL,
+    book_id         SERIAL PRIMARY KEY,
     name            VARCHAR (100) NOT NULL ,
     price           INT NOT NULL,
     category_id     INT
