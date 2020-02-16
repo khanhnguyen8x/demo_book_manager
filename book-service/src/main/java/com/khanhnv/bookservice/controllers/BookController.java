@@ -20,10 +20,11 @@ public class BookController {
         return bookService.getBookByCategoryId(categoryId);
     }
 
-    @GetMapping(value = "/{bookId}")
+    @GetMapping(value = "/{bookId}/{clientType}")
     public Book getBook(@PathVariable("categoryId") int categoryId,
-                        @PathVariable("bookId") int bookId) {
-        return bookService.getBook(categoryId, bookId);
+                        @PathVariable("bookId") int bookId,
+                        @PathVariable("clientType") String clientType) {
+        return bookService.getBook(categoryId, bookId, clientType);
     }
 
     @PostMapping(value = "/")

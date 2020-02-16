@@ -1,9 +1,6 @@
 package com.khanhnv.bookservice.models;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -13,6 +10,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Entity
 @Table(name = "book")
+@Builder
 public class Book {
 
     @Id
@@ -28,4 +26,10 @@ public class Book {
 
     @Column(name = "category_id")
     private int categoryId;
+
+    @Transient
+    private String categoryName;
+
+    @Transient
+    private String categoryDescription;
 }
